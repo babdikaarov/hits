@@ -1,0 +1,25 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta
+  name="description"
+  content="{{ if .Params.summary }}
+    {{ .Params.summary }}
+  {{ else if .Site.Params.Description }}
+    {{ .Site.Params.Description }}
+  {{ else }}
+    Hardcoded description; the author should update front matters summary or
+    Description:)
+  {{ end }}"
+/>
+{{ if .Params.icon }}
+  <link rel="icon" href="{{ .Params.icon | relURL }}" type="image/svg+xml" />
+{{ else }}
+  <link rel="icon" href="/icons/logo.svg" type="image/svg+xml" />
+{{ end }}
+<title>
+  {{ .Title }}
+</title>
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/google_analytics.html" . }}

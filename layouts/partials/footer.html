@@ -1,0 +1,47 @@
+<hr
+  class="bg-black container dark:bg-white dark:opacity-50 mx-auto h-[1.5px] dark:h-[1px]"
+/>
+<footer
+  class="container flex flex-wrap gap-5 mx-auto   items-center justify-between"
+>
+  <div
+    class="size-[75px] p-1 bg-neutral-800 shadow-white/15 shadow-[0_0_7px_0_var(--tw-shadow-color),0_4px_6px_-4px_var(--tw-shadow-color)]  rounded"
+  >
+    {{ with resources.Get "media/icons/logo.svg" }}
+      <img src="{{ .RelPermalink }}" alt="logo main" class="size-full" />
+    {{ end }}
+  </div>
+
+  {{ with site.Menus.mainmenu }}
+    <nav class="flex gap-4">
+      {{ range . }}
+        {{ if $.IsMenuCurrent .Menu . }}
+          <a
+            class="text-black/50 dark:text-slate-300/50"
+            aria-current="page"
+            href="{{ .URL }}"
+            >{{ .Name }}</a
+          >
+        {{ else }}
+          <a href="{{ .URL }}" class="text-black dark:text-slate-300"
+            >{{ .Name }}</a
+          >
+        {{ end }}
+      {{ end }}
+    </nav>
+  {{ end }}
+
+
+  <ul class="space-y-1">
+    {{ range .Params.contacts }}
+      <li class="flex gap-2 items-center">
+        <div class="size-5 dark:*:fill-slate-300 fill-neutral-800">
+          {{ partial "icons/telegram.html" . }}
+        </div>
+        <a href="https://t.me/{{ .contact }}" class="shareIcon" target="_blank"
+          >{{ .title }}</a
+        >
+      </li>
+    {{ end }}
+  </ul>
+</footer>

@@ -1,0 +1,89 @@
+<header>
+  <nav
+    class="h-14 top-0 fixed z-50 w-full  bg-white/30 dark:bg-black/35 backdrop-blur-md px-8"
+  >
+    <div
+      class="md:max-w-[500px] ml-auto h-full flex items-center gap-3 justify-end text-base"
+    >
+      {{ with site.Menus.mainmenu }}
+        {{ range . }}
+          {{ if $.IsMenuCurrent .Menu . }}
+            <a
+              class="text-black/50 dark:text-slate-300/50"
+              aria-current="page"
+              href="{{ .URL }}"
+              >{{ .Name }}</a
+            >
+          {{ else }}
+            <a href="{{ .URL }}" class="text-black dark:text-slate-300"
+              >{{ .Name }}</a
+            >
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if .Site.IsMultiLingual }}
+        {{ range .Site.Languages }}
+          {{ if eq . $.Site.Language }}
+            <span>{{ .LanguageName }}</span>
+          {{ end }}
+        {{ end }}
+        {{ range $.Translations }}
+          <ul class="dropdown__menu">
+            <li>
+              <a title="{{ .Language.LanguageName }}" href="{{ .Permalink }}"
+                >{{ .Language.LanguageName }}</a
+              >
+            </li>
+          </ul>
+        {{ end }}
+      {{ end }}
+    </div>
+  </nav>
+
+  {{ $hero_bg_remote := .Params.hero_bg_remote }}
+  {{ $hero_bg_local := .Params.hero_bg_local }}
+
+  {{ $hero_bg := $hero_bg_remote }}
+
+  {{ if not $hero_bg_remote }}
+    {{ with resources.Get $hero_bg_local }}
+      {{ $hero_bg = .RelPermalink }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not $hero_bg }}
+    {{ with resources.Get "media/hero/default.png" }}
+      {{ $hero_bg = .RelPermalink }}
+    {{ end }}
+  {{ end }}
+
+
+  <img
+    src="{{ $hero_bg }}"
+    alt=""
+    title="hero"
+    aria-label="hero"
+    class="size-full object-cover max-h-64 min-h-64 md:min-h-96 md:max-h-96 "
+  />
+  {{ if eq .Params.customIcon false }}
+    <div
+      class=" size-[125px] p-1 bg-neutral-800 mt-[-65px]  relative left-[10%] shadow-white/15 shadow-[0_0_7px_0_var(--tw-shadow-color)] rounded"
+    >
+      {{ with resources.Get "media/icons/logo.svg" }}
+        <img src="{{ .RelPermalink }}" alt="logo main" class="size-full" />
+      {{ end }}
+    </div>
+  {{ else }}
+    <span
+      role="img"
+      class=" text-[78px] top-20rem mt-[-63px] relative left-[10%] block w-fit"
+      data-type="emoji"
+      >{{ .Params.customIcon }}</span
+    >
+  {{ end }}
+  <h1 class="text-2xl leading-3xl font-extrabold container mt-4 m-auto">
+    {{ .Title }}
+    {{ .Kind }}
+    {{ .Type }}
+  </h1>
+</header>

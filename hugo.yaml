@@ -1,0 +1,45 @@
+languageCode: "en-us"
+
+taxonomies:
+  category: categories
+  tag: tags
+
+build:
+  buildStats:
+    enable: true
+
+enableRobotsTXT: true
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+languages:
+  ru:
+    disabled: false
+    languageCode: ru-RU
+    languageDirection: ltr
+    languageName: Русский
+    languagePrefix: ru
+    weight: 1
+  en:
+    disabled: false
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: English
+    languagePrefix: en
+    weight: 2
+
+services:
+  disqus:
+    shortname: your-disqus-shortname
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
+      wrapStandAloneImageWithinParagraph: false
+    renderer:
+      hardWraps: false
+      unsafe: true

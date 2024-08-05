@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <main>
+    <h1 class="bg-amber-400">404 Not Found</h1>
+    <p>The page you requested cannot be found.</p>
+    <p>
+      <a href="{{ .Site.BaseURL }}{{ .Page.Language }}">
+        Return to the home page
+        {{ .Site.BaseURL }}{{ .Page.Language }}
+      </a>
+    </p>
+  </main>
+{{ end }}

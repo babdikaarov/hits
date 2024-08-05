@@ -1,0 +1,19 @@
+<!doctype html>
+<html
+  class="dark"
+  lang="{{ or site.Language.LanguageCode }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}"
+>
+  <head>
+    {{ partial "head.html" . }}
+
+  </head>
+  <body
+    class="bg-white dark:bg-darkMode dark:text-slate-100 h-full pb-24  space-y-10 scroll-smooth"
+  >
+    {{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+    <!-- {{ template "_internal/disqus.html" . }} -->
+  </body>
+</html>

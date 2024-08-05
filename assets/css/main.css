@@ -1,0 +1,231 @@
+/* assets */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-size-xsm: clamp(0.6rem, 0.09vi + 0.56rem, 0.69rem);
+  --font-size-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --font-size-lg: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --font-size-xl: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --font-size-2xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --font-size-3xl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --font-size-4xl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+  --font-size-5xl: clamp(3.81rem, 5.18vi + 2.52rem, 6.66rem);
+  --font-size-6xl: clamp(4.77rem, 7.48vi + 2.9rem, 8.88rem);
+  --font-size-sm--line-height: clamp(1rem, 0.17vi + 0.76rem + 0.3rem, 1.1rem);
+  --font-size-base--line-height: clamp(
+    1.4rem,
+    0.34vi + 0.91rem + 0.4rem,
+    1.55rem
+  );
+  --font-size-lg--line-height: clamp(
+    1.7rem,
+    0.61vi + 1.1rem + 0.45rem,
+    1.85rem
+  );
+  --font-size-xl--line-height: clamp(1.85rem, 1vi + 1.31rem + 0.3rem, 2.2rem);
+  --font-size-2xl--line-height: clamp(
+    2.2rem,
+    1.56vi + 1.56rem + 0.35rem,
+    2.5rem
+  );
+  --font-size-3xl--line-height: clamp(
+    2.55rem,
+    2.38vi + 1.85rem + 0.35rem,
+    2.75rem
+  );
+  --font-size-4xl--line-height: clamp(
+    3.15rem,
+    3.54vi + 2.17rem + 0.35rem,
+    3.4rem
+  );
+  --font-size-5xl--line-height: clamp(
+    3.85rem,
+    5.18vi + 2.52rem + 0.3rem,
+    4.1rem
+  );
+  --font-size-6xl--line-height: clamp(
+    4.5rem,
+    7.48vi + 2.9rem + 0.35rem,
+    4.9rem
+  );
+  --filter-grannary-image-url: url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.44' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  --arrow-onlight-icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3Cpath d='m21 3-9 9'/%3E%3Cpath d='M15 3h6v6'/%3E%3C/svg%3E");
+  --arrow-ondark-icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3Cpath d='m21 3-9 9'/%3E%3Cpath d='M15 3h6v6'/%3E%3C/svg%3E");
+}
+
+body {
+  /* @apply antialiased pt-[100lvh]; */
+  @apply antialiased font-notion;
+  text-rendering: optimizespeed;
+}
+
+.markdown {
+  @apply text-gray-900 dark:text-slate-300 font-notion;
+
+  /* table {
+    @apply w-full text-left mt-4;
+  }
+  th {
+    @apply text-xl;
+  }
+  tr {
+    @apply flex flex-col;
+  }
+  thead {
+    @apply border-b-[12px] border-transparent;
+  } */
+  ul:has(a[href^="/"]) {
+    list-style-type: none;
+    /* padding-left: 0%; */
+    a[href^="/"] {
+      @apply noShareIcon;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply tracking-tight mb-3 relative;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  h4 {
+    @apply text-lg font-bold;
+  }
+
+  h5 {
+    @apply text-base font-bold;
+  }
+
+  h6 {
+    @apply text-sm font-bold;
+  }
+
+  p + h2,
+  p + h3,
+  ul + h2,
+  ul + h3,
+  ol + h2,
+  ol + h3 {
+    @apply mt-6;
+  }
+
+  h2 + h3 {
+    @apply mt-2;
+  }
+
+  hr {
+    @apply mt-4 mb-10  bg-black dark:bg-white dark:opacity-50  h-[1.5px] dark:h-[1px];
+  }
+
+  p {
+    @apply text-base mt-2 leading-relaxed font-normal;
+  }
+
+  a {
+    @apply underline underline-offset-[3px] decoration-[0.2px];
+  }
+
+  a:hover {
+    @apply text-blue-800;
+  }
+  a:active {
+    @apply text-red-800;
+  }
+
+  ul {
+    @apply list-disc pl-4;
+  }
+
+  ol {
+    @apply list-decimal pl-4;
+  }
+
+  blockquote {
+    @apply border-l-2 border-gray-200 pl-3 mt-6 mb-8;
+  }
+
+  .highlight {
+    @apply my-2;
+    pre {
+      @apply text-sm m-0 p-4;
+
+      code {
+        @apply bg-none p-0;
+      }
+    }
+  }
+
+  pre:has(code) {
+    @apply p-2 m-4 bg-gray-100 rounded-lg overflow-x-auto;
+  }
+
+  pre {
+    code {
+      @apply bg-inherit text-sm font-mono;
+    }
+  }
+
+  code {
+    @apply bg-gray-200 px-1 rounded-md text-green-800;
+  }
+}
+
+@layer utilities {
+  .shareIcon {
+    @apply dark:bg-onDark-icon-share pr-2 bg-onLight-icon-share  bg-no-repeat bg-right-top bg-[length:8px_8px];
+  }
+  .noShareIcon {
+    @apply pl-[0px] dark:bg-none bg-none;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding-right: 2rem /* 16px */;
+}
+@media (min-width: 640px) {
+  .wrapper {
+    max-width: 640px;
+    padding-right: 2rem /* 32px */;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 1024px;
+    padding-right: 4rem /* 64px */;
+  }
+}
+@media (min-width: 1280px) {
+  .wrapper {
+    max-width: 1280px;
+    padding-right: 5rem /* 80px */;
+  }
+}
+@media (min-width: 1536px) {
+  .wrapper {
+    max-width: 1536px;
+    padding-right: 6rem /* 96px */;
+  }
+}

@@ -1,0 +1,9 @@
+<div
+  style="{{ .Get `style` }}"
+  class="{{ .Get `class` }} p-4 mb-4 w-full text-sm!important relative flex gap-2 text-black"
+>
+  <span role="img" class="mt-2">
+    {{ .Get "emoji" }}
+  </span>
+  {{ .Inner }}
+</div>
