@@ -1,7 +1,7 @@
-local_backend: true
+local_backend: false
 backend:
   name: git-gateway
-  branch: dev # Branch to update (optional; defaults to master)
+  branch: deploy # Branch to update (optional; defaults to master)
 media_folder: "static/media/uploads"
 public_folder: "/media/uploads"
 locale: "ru"

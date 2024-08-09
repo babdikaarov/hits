@@ -1,7 +1,5 @@
 baseURL: "http://localhost:1313"
 
-title: Hello IT SAFARI
-
 taxonomies:
   category: categories
   tag: tags
@@ -20,18 +18,17 @@ defaultContentLanguageInSubdir: false
 
 languages:
   ru:
+    title: Hello IT SAFARI
     disabled: false
     languageCode: ru-RU
     languageDirection: ltr
     languageName: Русский
-    languagePrefix: ru
     weight: 1
   en:
-    disabled: false
+    disabled: true
     languageCode: en-US
     languageDirection: ltr
     languageName: English
-    languagePrefix: en
     weight: 2
 
 services:

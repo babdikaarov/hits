@@ -15,6 +15,18 @@
     {{ partial "header.html" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
-    <!-- {{ template "_internal/disqus.html" . }} -->
   </body>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js", { scope: "/" })
+          .then((req) =>
+            console.log("Reqistration success scope: " + req.scope),
+          )
+          .catch((error) => console.log("Reqistration of sw failed " + error));
+      });
+    }
+  </script>
 </html>

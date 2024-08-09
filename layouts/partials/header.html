@@ -13,10 +13,12 @@
       </div>
 
       <label
+        role="menu-triger"
         id="menu-icon-wrapper"
-        class="menu-icon-wrapper peer z-50 md:hidden"
+        class=" menu-icon-wrapper peer z-50 md:hidden"
         style="visibility:visible"
         for="burger-button"
+        tabindex="-1"
       >
         <svg width="1e3" height="1e3">
           <path
@@ -30,6 +32,8 @@
           ></path>
         </svg>
         <input
+          tabindex="-1"
+          role="button"
           id="burger-button"
           class="appearance-none menu-icon-trigger checked:bg-white/70 checked:dark:bg-black/70 checked:z-30 checked:fixed checked:top-0 checked:left-0 checked:right-0 checked:bottom-0 checked:opacity-25"
           type="checkbox"

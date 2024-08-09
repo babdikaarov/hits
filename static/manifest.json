@@ -1,11 +1,11 @@
 {
   "name": "Hello IT SAFARI - team of professionals",
   "short_name": "HELLO IT SAFARI",
-  "description": "Мы - команда Hello IT Safari, и наша миссия - помочь IT-специалистам найти работу, соответствующую их ожиданиям и навыкам. Мы охватываем каждый аспект поиска работы: от составления резюме и улучшения профиля на LinkedIn до анализа вакансий и подготовки к интервью. По запросу, мы также проводим технические интервью и предоставляем подробную обратную связь, чтобы вы могли понять свои слабые места и работать над ними.",
+  "description": "Мы - команда Hello IT Safari, и наша миссия - помочь IT-специалистам найти работу, соответствующую их ожиданиям и навыкам.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#fff",
-  "theme_color": "#fff",
+  "background_color": "#191919",
+  "theme_color": "#ff542f",
   "icons": [
     {
       "src": "/media/defaults/icons/manifest/icon-72x72.png",
@@ -24,11 +24,6 @@
     },
     {
       "src": "/media/defaults/icons/manifest/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "/media/defaults/icons/manifest/icon-.png",
       "sizes": "512x512",
       "type": "image/png"
     },
