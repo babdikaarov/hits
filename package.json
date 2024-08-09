@@ -19,6 +19,7 @@
     "start": "run-p start:*",
     "build:css": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css -m",
     "build:hugo": "hugo --minify",
-    "build": "run-s build:*"
+    "clean": "rm -rf public",
+    "build": "npm run clean && run-s build:*"
   }
 }
