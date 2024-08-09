@@ -7,21 +7,25 @@
   <div
     class="size-[75px] p-1 bg-neutral-800 shadow-white/15 shadow-[0_0_7px_0_var(--tw-shadow-color),0_4px_6px_-4px_var(--tw-shadow-color)]  rounded"
   >
-    {{ with resources.Get "media/icons/logo.svg" }}
-      <img src="{{ .RelPermalink }}" alt="logo main" class="size-full" />
-    {{ end }}
+    <img
+      src="/media/defaults/icons/logo.svg"
+      alt="logo main"
+      class="size-full"
+    />
   </div>
 
   {{ with site.Menus.mainmenu }}
     <nav class="flex gap-4">
       {{ range . }}
         {{ if $.IsMenuCurrent .Menu . }}
-          <a
-            class="text-black/50 dark:text-slate-300/50"
+          <button
+            disabled
+            class="text-black/50 font-bold curlyBraces dark:text-slate-300/50"
             aria-current="page"
             href="{{ .URL }}"
-            >{{ .Name }}</a
           >
+            {{ .Name }}
+          </button>
         {{ else }}
           <a href="{{ .URL }}" class="text-black dark:text-slate-300"
             >{{ .Name }}</a

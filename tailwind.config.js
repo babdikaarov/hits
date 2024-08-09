@@ -10,10 +10,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        borderSpin: {
+          "100%": {
+            transform: "rotate(-360deg)",
+          },
+        },
+      },
+      animation: {
+        borderSpin: "borderSpin 1.7s linear  infinite",
+        borderSpinActive: "borderSpin 0.7s forward",
+      },
       backgroundImage: {
         "onDark-icon-share": "var(--arrow-ondark-icon-url)",
         "onLight-icon-share": "var(--arrow-onlight-icon-url)",
         "grannary-effect": "var(--filter-grannary-image-url)",
+        "conic-gradient": "var(--bg-conic-gradient)",
       },
       fontFamily: {
         notion: [

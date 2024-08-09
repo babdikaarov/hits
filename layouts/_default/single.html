@@ -1,3 +1,39 @@
 {{ define "main" }}
-  <main>single.html</main>
+  <main class="container mx-auto">
+    <div class="text-gray-500 text-sm mb-2">
+      {{ if .Params.categories }}
+        {{ if $cat := i18n ("categories") }}
+          <strong>{{ $cat }}:</strong>
+        {{ else }}
+          <strong>Categories:</strong>
+        {{ end }}
+        {{ range .Params.categories }}
+          <a
+            href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"
+            class="text-gray-500 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+            >{{ . }}</a
+          >
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="text-gray-500 text-sm">
+      {{ if .Params.tags }}
+        {{ if $tag := i18n ("tags") }}
+          <strong>{{ $tag }}:</strong>
+        {{ else }}
+          <strong>Categories:</strong>
+        {{ end }}
+        {{ range .Params.tags }}
+          <a
+            href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"
+            class="text-gray-500 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+            >{{ . }}</a
+          >
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="markdown">
+      <div>{{ .Content }}</div>
+    </div>
+  </main>
 {{ end }}

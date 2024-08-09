@@ -1,0 +1,31 @@
+<div class="h-64 md:h-96 w-full bg-black hero">
+  {{ if .Params.hero_bg }}
+    <img
+      src="{{ .Params.hero_bg }}"
+      alt=""
+      title="hero"
+      aria-label="hero"
+      class="size-full object-cover "
+    />
+  {{ end }}
+</div>
+<div class="container m-auto main_icon">
+  {{ if or (not .Params.customIcon) (eq .Params.customIcon "") }}
+    <div
+      class="size-[125px] p-1 bg-neutral-800 mt-[-65px] relative shadow-white/15 shadow-[0_0_7px_0_var(--tw-shadow-color)] rounded"
+    >
+      <img
+        src="/media/defaults/icons/logo.svg"
+        alt="logo main"
+        class="size-full"
+      />
+    </div>
+  {{ else }}
+    <span
+      role="img"
+      class="text-[78px] top-20rem mt-[-63px] relative block w-fit"
+      data-type="emoji"
+      >{{ .Params.customIcon }}</span
+    >
+  {{ end }}
+</div>

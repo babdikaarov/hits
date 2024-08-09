@@ -1,8 +1,13 @@
-languageCode: "en-us"
+baseURL: "http://localhost:1313"
+
+title: Hello IT SAFARI
 
 taxonomies:
   category: categories
   tag: tags
+
+capitalizeListTitles: true
+titleCaseStyle: firstupper
 
 build:
   buildStats:
@@ -10,8 +15,8 @@ build:
 
 enableRobotsTXT: true
 
-defaultContentLanguage: en
-defaultContentLanguageInSubdir: true
+defaultContentLanguage: ru
+defaultContentLanguageInSubdir: false
 
 languages:
   ru:

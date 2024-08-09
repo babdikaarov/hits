@@ -1,0 +1,42 @@
+{{ $list := .Get "list" }}
+{{ $limit := .Get "limit" }}
+{{ $taxonomy := .Get "taxonomy" }}
+{{ $class :=  .Get "class" }}
+{{ $style :=  .Get "style" }}
+{{ $reference := false }}
+{{ with .Site.Taxonomies }}
+  {{ range $key, $value := . }}
+    {{ if eq $key $taxonomy }}
+      {{ range $catKey, $catValue := $value }}
+        {{ if eq $catKey $list }}
+          {{ $pages := $catValue.Pages.ByDate }}
+          {{ $pagesLen := len $pages }}
+          {{ $showMore := false }}
+          {{ if gt $pagesLen $limit }}
+            {{ $showMore = true }}
+          {{ end }}
+          {{ if $limit }}
+            {{ $pages = $pages | first $limit }}
+          {{ end }}
+          <ul class="{{ $class }}" style="{{ $style }}">
+            {{ range $pages }}
+              <li>
+                <a href="{{ .RelPermalink }}" target="_blank" class="shareIcon">
+                  <span role="img">
+                    {{ .Params.customIcon }}
+                  </span>
+                  {{ .Title }}
+                </a>
+              </li>
+            {{ end }}
+            {{ if $showMore }}
+              <p>
+                <a href="/{{ $taxonomy }}/{{ $list }}">Show more...</a>
+              </p>
+            {{ end }}
+          </ul>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

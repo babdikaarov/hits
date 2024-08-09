@@ -1,0 +1,36 @@
+<div class="w-full grid grid-cols-1 md:grid-cols-2 auto-rows-[106px] gap-10">
+  {{ with $file := .Get "filename" }}
+    {{ with resources.Get $file }}
+      {{ with . | transform.Unmarshal }}
+        {{ range . }}
+          <a
+            href="{{ .original_url }}"
+            target="_blank"
+            class=" no-underline border-[0.5px] hover:cursor-pointer text-left flex overflow-hidden border-current  rounded"
+          >
+            <div class="flex-[4_1_180px] p-3">
+              <h3 class="text-sm line-clamp-1">{{ .title }}</h3>
+              <p class="text-xsm line-clamp-2">
+                {{ .description }}
+              </p>
+              <div class="flex gap-2 items-center">
+                <img class="size-4 object-cover" src="{{ .icon }}" alt="Icon" />
+                <p class="line-clamp-1 text-xsm">
+                  {{ .original_url }}
+                </p>
+              </div>
+            </div>
+            <div class="flex-[1_1_180px] md:hidden lg:block">
+              <img class="size-full" src="{{ .image }}" alt="Image" />
+            </div>
+          </a>
+        {{ end }}
+
+      {{ end }}
+    {{ else }}
+      {{ errorf "The %q shortcode was unable to find %s. See %s" $.Name $file $.Position }}
+    {{ end }}
+  {{ else }}
+    {{ errorf "The %q shortcode requires one positional argument, the path to the CSV file relative to the assets directory. See %s" .Name .Position }}
+  {{ end }}
+</div>

@@ -1,19 +1,86 @@
 local_backend: true
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+  branch: dev # Branch to update (optional; defaults to master)
+media_folder: "static/media/uploads"
+public_folder: "/media/uploads"
+locale: "ru"
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "testimonial"
+    label: "Testimonial"
+    folder: "content/testimonials/feedback"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
+      - { label: "hero bg ", name: "hero_bg", widget: "image", required: false }
+      - {
+          label: "custom Icon",
+          name: "customIcon",
+          widget: "string",
+          required: false,
+        }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+        }
+      - { label: "Recomender", name: "recomendedBy", widget: "string" }
+      - { label: "linked In", name: "linkedIn", widget: "string" }
+      - { label: "image path", name: "image", widget: "image" }
+      - {
+          label: "Link to single Page",
+          name: "relatePage",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "author",
+          default: "HITS",
+          required: false,
+        }
+  - name: "guide"
+    label: "Guides"
+    folder: "content/guides/guide"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "hero bg ", name: "hero_bg", widget: "image", required: false }
+      - {
+          label: "custom Icon",
+          name: "customIcon",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "categories", name: "categories", widget: "list" }
+      - { label: "tag", name: "tags", widget: "list" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "author",
+          default: "HITS",
+          required: false,
+        }

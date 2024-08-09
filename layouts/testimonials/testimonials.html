@@ -3,7 +3,7 @@
     <div class="markdown mb-9">
       <div>{{ .Content }}</div>
     </div>
-    {{ range .Pages }}
+    {{ range .Pages.ByPublishDate.Reverse }}
       <div class="relative mb-6">
         <a href="{{ .RelPermalink }}" class="text-lg">
           <svg
@@ -21,12 +21,10 @@
           {{ .Params.linkedIn }}</a
         >
 
-        {{ with resources.Get .Params.image }}
-          <img
-            src="{{ .RelPermalink }}"
-            alt="testimonail from {{ .Params.recomendedBy }}"
-          />
-        {{ end }}
+        <img
+          src="{{ .Params.image }}"
+          alt="testimonail from {{ .Params.recomendedBy }}"
+        />
         {{ if .Params.relatePage | default false }}
           <a href="{{ .RelPermalink }}" class="size-5 top-0 right-0 absolute">
             <svg

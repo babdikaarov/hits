@@ -1,89 +1,50 @@
 <header>
-  <nav
-    class="h-14 top-0 fixed z-50 w-full  bg-white/30 dark:bg-black/35 backdrop-blur-md px-8"
-  >
+  <nav class="h-14 top-0 fixed z-50 w-full">
     <div
-      class="md:max-w-[500px] ml-auto h-full flex items-center gap-3 justify-end text-base"
+      class="bg-white/30 dark:bg-black/35 backdrop-blur-md absolute size-full"
+    ></div>
+    <div
+      class=" h-full w-full container flex mx-auto items-center gap-4 md:justify-between justify-end text-base "
     >
-      {{ with site.Menus.mainmenu }}
-        {{ range . }}
-          {{ if $.IsMenuCurrent .Menu . }}
-            <a
-              class="text-black/50 dark:text-slate-300/50"
-              aria-current="page"
-              href="{{ .URL }}"
-              >{{ .Name }}</a
-            >
-          {{ else }}
-            <a href="{{ .URL }}" class="text-black dark:text-slate-300"
-              >{{ .Name }}</a
-            >
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ if .Site.IsMultiLingual }}
-        {{ range .Site.Languages }}
-          {{ if eq . $.Site.Language }}
-            <span>{{ .LanguageName }}</span>
-          {{ end }}
-        {{ end }}
-        {{ range $.Translations }}
-          <ul class="dropdown__menu">
-            <li>
-              <a title="{{ .Language.LanguageName }}" href="{{ .Permalink }}"
-                >{{ .Language.LanguageName }}</a
-              >
-            </li>
-          </ul>
-        {{ end }}
-      {{ end }}
+      <div class="flex gap-4 z-[51]">
+        {{ partial "header/localeSwitcher.html" . }}
+
+        {{ partial "header/themModeButton.html" . }}
+      </div>
+
+      <label
+        id="menu-icon-wrapper"
+        class="menu-icon-wrapper peer z-50 md:hidden"
+        style="visibility:visible"
+        for="burger-button"
+      >
+        <svg width="1e3" height="1e3">
+          <path
+            class="path1"
+            d="M3e2 4e2H7e2c2e2.0 2e2 350-1e2 450A4e2 4e2.0 012e2 2e2L8e2 8e2"
+          ></path>
+          <path class="path2" d="M3e2 5e2H7e2"></path>
+          <path
+            class="path3"
+            d="M7e2 6e2H3e2c-2e2.0-2e2-4e2 1e2-450A4e2 380 0 112e2 8e2L8e2 2e2"
+          ></path>
+        </svg>
+        <input
+          id="burger-button"
+          class="appearance-none menu-icon-trigger checked:bg-white/70 checked:dark:bg-black/70 checked:z-30 checked:fixed checked:top-0 checked:left-0 checked:right-0 checked:bottom-0 checked:opacity-25"
+          type="checkbox"
+        />
+      </label>
+      <div class="menu-item">
+        {{ partial "header/menu.html" . }}
+      </div>
     </div>
   </nav>
-
-  {{ $hero_bg_remote := .Params.hero_bg_remote }}
-  {{ $hero_bg_local := .Params.hero_bg_local }}
-
-  {{ $hero_bg := $hero_bg_remote }}
-
-  {{ if not $hero_bg_remote }}
-    {{ with resources.Get $hero_bg_local }}
-      {{ $hero_bg = .RelPermalink }}
-    {{ end }}
-  {{ end }}
-
-  {{ if not $hero_bg }}
-    {{ with resources.Get "media/hero/default.png" }}
-      {{ $hero_bg = .RelPermalink }}
-    {{ end }}
-  {{ end }}
+  {{ partial "header/hero.html" . }}
 
 
-  <img
-    src="{{ $hero_bg }}"
-    alt=""
-    title="hero"
-    aria-label="hero"
-    class="size-full object-cover max-h-64 min-h-64 md:min-h-96 md:max-h-96 "
-  />
-  {{ if eq .Params.customIcon false }}
-    <div
-      class=" size-[125px] p-1 bg-neutral-800 mt-[-65px]  relative left-[10%] shadow-white/15 shadow-[0_0_7px_0_var(--tw-shadow-color)] rounded"
-    >
-      {{ with resources.Get "media/icons/logo.svg" }}
-        <img src="{{ .RelPermalink }}" alt="logo main" class="size-full" />
-      {{ end }}
-    </div>
-  {{ else }}
-    <span
-      role="img"
-      class=" text-[78px] top-20rem mt-[-63px] relative left-[10%] block w-fit"
-      data-type="emoji"
-      >{{ .Params.customIcon }}</span
-    >
-  {{ end }}
   <h1 class="text-2xl leading-3xl font-extrabold container mt-4 m-auto">
-    {{ .Title }}
-    {{ .Kind }}
-    {{ .Type }}
+    {{ strings.FirstUpper .Title }}
+
   </h1>
 </header>

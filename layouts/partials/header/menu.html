@@ -1,0 +1,20 @@
+{{ $typesToHighlight := slice "guides" "testimonials" }}
+{{ $currentPageType := .Type }}
+{{ with site.Menus.mainmenu }}
+  {{ range . }}
+    {{ if $.IsMenuCurrent .Menu . }}
+      <button
+        disabled
+        class="text-black/50 relative font-bold w-fit curlyBracesHeader dark:text-slate-300/50"
+        aria-current="page"
+        href="{{ .URL }}"
+      >
+        {{ strings.FirstUpper .Name }}
+      </button>
+    {{ else }}
+      <a href="{{ .URL }}" class="text-black font-bold dark:text-slate-300"
+        >{{ strings.FirstUpper .Name }}</a
+      >
+    {{ end }}
+  {{ end }}
+{{ end }}

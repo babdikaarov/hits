@@ -1,0 +1,30 @@
+{{/* Shortcode: pages_list.html */}}
+
+{{ $oneTranslationColor := "text-red-300" }}
+{{ $bothTranslationsColor := "text-green-300" }}
+{{ $highlite :=  "text-gray-300" }}
+
+
+<div>
+  <p class="w-fit text-black mb-3 bg-red-300 rounded p-2">
+    has both translations (ru/en)
+  </p>
+  <p class="w-fit text-black bg-green-300 rounded p-2">
+    has only one traslations (ru || en)
+  </p>
+</div>
+
+<ul class="list-disc">
+  {{ range .Site.AllPages.ByLanguage }}
+    {{ if eq .IsTranslated true }}
+      {{ $highlite = $bothTranslationsColor }}
+    {{ else }}
+      {{ $highlite = $oneTranslationColor }}
+    {{ end }}
+    <li class="mt-3 p-2">
+      <a href="{{ .RelPermalink }}" class="{{ $highlite }} hover:underline">
+        {{ .RelPermalink }} ({{ .Lang }})
+      </a>
+    </li>
+  {{ end }}
+</ul>

@@ -1,8 +1,16 @@
 {{ define "main" }}
   <main class="container mx-auto">
-    <div class="markdown">
+    <div class="markdown mb-9">
       <div>{{ .Content }}</div>
-      list.html
     </div>
+    <ul class="list-disc">
+      {{ range .Pages }}
+        <li class="relative mb-6">
+          <a href="{{ .RelPermalink }}" class="text-lg hover:text-primary">
+            {{ .Title }}</a
+          >
+        </li>
+      {{ end }}
+    </ul>
   </main>
 {{ end }}
