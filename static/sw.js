@@ -1,11 +1,12 @@
 importScripts(
-  "https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js",
+  `https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js`,
 );
 
 const { registerRoute } = workbox.routing;
 const { CacheFirst, StaleWhileRevalidate } = workbox.strategies;
-const { ExpirationPlugin } = workbox - expiration;
+const { ExpirationPlugin } = workbox.expiration;
 
+// Register route for caching styles, scripts, and images
 registerRoute(
   ({ request }) =>
     request.destination === "style" ||
@@ -14,8 +15,8 @@ registerRoute(
   new CacheFirst({
     cacheName: "static-assets",
     plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 50,
+      new ExpirationPlugin({
+        maxEntries: 1000,
         maxAgeSeconds: 7 * 24 * 60 * 60, // Cache items for a week
       }),
     ],
@@ -26,7 +27,7 @@ self.addEventListener("install", (event) => {
   const urlsToCache = [
     "/",
     "/index.html",
-    "/sevice/index.html",
+    "/service/index.html",
     "/404.html",
     "/css/style.css",
     "/js/main.js",
