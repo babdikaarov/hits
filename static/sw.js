@@ -29,7 +29,7 @@ self.addEventListener("install", (event) => {
     "/index.html",
     "/service/index.html",
     "/404.html",
-    "/css/style.css",
+    "/css/style.min.css",
     "/js/main.js",
     "/media/defaults/icons/favicon/favicon-196x196.png",
   ];

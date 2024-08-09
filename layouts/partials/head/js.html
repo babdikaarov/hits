@@ -6,7 +6,7 @@
   {{- else }}
     {{- $opts := dict "minify" true }}
     {{- with . | js.Build
-      $opts | fingerprint
+      $opts
     }}
       <script
         src="{{ .RelPermalink }}"
@@ -17,5 +17,3 @@
     {{- end }}
   {{- end }}
 {{- end }}
-
-
