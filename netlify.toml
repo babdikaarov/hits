@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.129.0"
