@@ -3,6 +3,6 @@
 {{ if hugo.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 {{ else }}
-  {{ $styles := $styles | minify }}
+  {{ $styles := $styles | minify  }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 {{ end }}

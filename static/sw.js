@@ -23,6 +23,7 @@ registerRoute(
   }),
 );
 
+
 self.addEventListener("install", (event) => {
   const urlsToCache = [
     "/",
