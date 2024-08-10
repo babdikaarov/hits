@@ -16,7 +16,7 @@ registerRoute(
     cacheName: "static-assets",
     plugins: [
       new ExpirationPlugin({
-        maxEntries: 1000,
+        maxEntries: 100,
         maxAgeSeconds: 7 * 24 * 60 * 60, // Cache items for a week
       }),
     ],

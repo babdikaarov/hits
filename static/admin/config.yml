@@ -11,8 +11,164 @@ slug:
   sanitize_replacement: "_"
 
 collections:
+  - name: "home"
+    label: "Home"
+    folder: "content"
+    create: false
+    delete: false
+    editor:
+      preview: true
+    sortable_fields: []
+    fields:
+      - { label: "title", name: "title", widget: "string", required: true }
+      - { label: "summary", name: "summary", widget: "string", required: true }
+      - { label: "og_image", name: "og_image", widget: "image", required: true }
+      - label: "Menu"
+        name: "menu"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Main Menu"
+            name: "mainmenu"
+            widget: "object"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "text"
+              - label: "Page Reference"
+                name: "pageRef"
+                widget: "text"
+              - label: "Weight"
+                name: "weight"
+                widget: "number"
+
+      - { label: "hero bg ", name: "hero_bg", widget: "image", required: true }
+      - {
+          label: "customIcon",
+          name: "customIcon",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "service"
+    label: "Service"
+    folder: "content/service"
+    delete: false
+    create: false
+    sortable_fields: []
+    editor:
+      preview: true
+    fields:
+      - { label: "title", name: "title", widget: "string", required: true }
+      - { label: "summary", name: "summary", widget: "string", required: true }
+      - { label: "og_image", name: "og_image", widget: "image", required: true }
+      - label: "Menu"
+        name: "menu"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Main Menu"
+            name: "mainmenu"
+            widget: "object"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "text"
+              - label: "Page Reference"
+                name: "pageRef"
+                widget: "text"
+              - label: "Weight"
+                name: "weight"
+                widget: "number"
+
+      - { label: "hero bg ", name: "hero_bg", widget: "image", required: true }
+      - {
+          label: "customIcon",
+          name: "customIcon",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "guide"
+    label: "guide"
+    folder: "content/guides"
+    delete: false
+    create: false
+    sortable_fields: []
+    editor:
+      preview: true
+    fields:
+      - { label: "title", name: "title", widget: "string", required: true }
+      - { label: "summary", name: "summary", widget: "string", required: true }
+      - { label: "og_image", name: "og_image", widget: "image", required: true }
+      - label: "Menu"
+        name: "menu"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Main Menu"
+            name: "mainmenu"
+            widget: "object"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "text"
+              - label: "Page Reference"
+                name: "pageRef"
+                widget: "text"
+              - label: "Weight"
+                name: "weight"
+                widget: "number"
+
+      - { label: "hero bg ", name: "hero_bg", widget: "image", required: true }
+      - {
+          label: "customIcon",
+          name: "customIcon",
+          widget: "string",
+          required: false,
+        }
   - name: "testimonial"
-    label: "Testimonial"
+    label: "testimonial"
+    folder: "content/testimonials"
+    delete: false
+    create: false
+    sortable_fields: []
+    editor:
+      preview: true
+    fields:
+      - { label: "title", name: "title", widget: "string", required: true }
+      - { label: "summary", name: "summary", widget: "string", required: true }
+      - { label: "og_image", name: "og_image", widget: "image", required: true }
+      - label: "Menu"
+        name: "menu"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Main Menu"
+            name: "mainmenu"
+            widget: "object"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "text"
+              - label: "Page Reference"
+                name: "pageRef"
+                widget: "text"
+              - label: "Weight"
+                name: "weight"
+                widget: "number"
+
+      - { label: "hero bg ", name: "hero_bg", widget: "image", required: false }
+      - {
+          label: "customIcon",
+          name: "customIcon",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "testimonials"
+    label: "testimonials"
     folder: "content/testimonials/feedback"
     create: true
     slug: "{{slug}}"
@@ -51,7 +207,7 @@ collections:
           default: "HITS",
           required: false,
         }
-  - name: "guide"
+  - name: "guides"
     label: "Guides"
     folder: "content/guides/guide"
     create: true
@@ -80,7 +236,7 @@ collections:
       - {
           label: "Author",
           name: "author",
-          widget: "author",
+          widget: "string",
           default: "HITS",
           required: false,
         }

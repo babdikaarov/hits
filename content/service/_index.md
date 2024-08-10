@@ -1,14 +1,10 @@
 ---
 title: "Услуги Hello IT Safari | HITS  🦖"
-navTitle: "Service"
+
 hero_bg: /media/images/hits.png
 og_image: /media/images/hits.png
 customIcon: 👨‍💻
-contacts:
-  - contact: test
-    title: John
-  - contant: 0312012
-    title: Beka
+
 menu:
   mainmenu:
     name: Услуги

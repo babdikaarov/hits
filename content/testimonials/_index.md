@@ -1,17 +1,13 @@
 ---
-title: "Client's feedback about Hello IT Safari  🦖"
-navTitle: "Testimonail"
-customIcon: 🚀
-contacts:
-  - contact: test
-    title: John
-  - contact: list
-    title: can be a list of contacts
+title: Client's feedback about Hello IT Safari  🦖
+summary: test
+og_image: /media/uploads/White_Minimalist_Corporate_Personal_Profile_LinkedIn_Banner.png
 menu:
   mainmenu:
     name: Отзывы
     pageRef: /testimonails
     weight: 5
+customIcon: 🚀
 ---
 
 {{% section %}}

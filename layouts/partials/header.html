@@ -48,6 +48,13 @@
 
 
   <h1 class="text-2xl leading-3xl font-extrabold container mt-4 m-auto">
+    {{ $taxon := "" }}
+    {{ $type := .Type }}
+    {{ range $key, $value := .Site.Taxonomies }}
+      {{ if eq $type $key }}
+        {{ i18n ($key) }} -
+      {{ end }}
+    {{ end }}
     {{ strings.FirstUpper .Title }}
 
   </h1>

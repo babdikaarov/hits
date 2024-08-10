@@ -5,7 +5,7 @@
   class="container flex flex-wrap gap-5 mx-auto   items-center justify-between"
 >
   <div
-    class="size-[75px] p-1 bg-neutral-800 shadow-white/15 shadow-[0_0_7px_0_var(--tw-shadow-color),0_4px_6px_-4px_var(--tw-shadow-color)]  rounded"
+    class="order-2  size-[75px] p-1 bg-neutral-800 shadow-white/15 shadow-[0_0_7px_0_var(--tw-shadow-color),0_4px_6px_-4px_var(--tw-shadow-color)]  rounded"
   >
     <img
       src="/media/defaults/icons/logo.svg"
@@ -15,7 +15,7 @@
   </div>
 
   {{ with site.Menus.mainmenu }}
-    <nav class="flex gap-4">
+    <nav class="flex gap-4 order-3 ">
       {{ range . }}
         {{ if $.IsMenuCurrent .Menu . }}
           <button
@@ -36,16 +36,49 @@
   {{ end }}
 
 
-  <ul class="space-y-1">
-    {{ range .Params.contacts }}
-      <li class="flex gap-2 items-center">
-        <div class="size-5 dark:*:fill-slate-300 fill-neutral-800">
-          {{ partial "icons/telegram.html" . }}
-        </div>
-        <a href="https://t.me/{{ .contact }}" class="shareIcon" target="_blank"
-          >{{ .title }}</a
-        >
-      </li>
+  <ul class="space-y-1 order-1 w-full ">
+    {{ $ticon := partial "icons/telegram.html" . }}
+    {{ with resources.Get "json/contacts.json" }}
+      {{ with . | transform.Unmarshal }}
+        {{ range . }}
+          <div class="p-4 w-full  relative bg-[#2b2431] rounded flex gap-3">
+            <a
+              href="{{ .original_url }}"
+              target="_blank"
+              class="flex peer gap-2 items-center"
+            >
+              <div class="size-5 dark:*:fill-slate-300 fill-[#1c93e3]">
+                {{ $ticon }}
+              </div>
+
+              <p>{{ .title }}</p>
+            </a>
+            <!-- pop up description -->
+            <div
+              class="absolute peer-hover:h-[200px] hover:h-[200px] right-0 h-0 hidden md:flex   overflow-hidden  bg-[#2b2431] text-white  flex-col bottom-0 rounded-xl"
+            >
+              <div class=" flex-[0.5] bg-[#1c93e3]  relative">
+                <img
+                  src="{{ .image }}"
+                  alt=""
+                  class="rounded-full size-20 absolute z-10 -translate-x-1/2 top-2 p-1 bg-[#1c93e3] left-1/2 "
+                />
+              </div>
+              <div class="relative pt-10 p-4 bg-inherit flex-1 text-center">
+                <p class="">{{ .title }}</p>
+                <p>{{ .description }}</p>
+
+                <p>
+                  <img src="{{ .icon }}" alt="" class="inline" />
+                  {{ .original_url }}
+                </p>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+        {{ end }}
+      {{ end }}
     {{ end }}
+
   </ul>
 </footer>
