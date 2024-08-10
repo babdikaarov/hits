@@ -15,4 +15,3 @@ window.toggleTheme = function toggleTheme() {
   document.documentElement.className = newTheme;
 };
 applyTheme();
-console.log(test);
