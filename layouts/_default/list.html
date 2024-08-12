@@ -47,7 +47,7 @@
         <li
           class="flex overflow-hidden border-current border-[0.5px] gap-4 h-40 rounded bg-slate-500/30"
         >
-          <div class="w-1/3 size-40 ">
+          <div class="w-1/3 size-40 hidden md:block">
             {{ if .Params.hero_bg }}
               <img
                 class="object-cover size-full"
@@ -56,7 +56,7 @@
               />
             {{ else }}
               <img
-                class="object-contain size-full"
+                class="object-contain bg-neutral-800 size-full"
                 src="{{ $logo }}"
                 alt="Image"
               />

@@ -70,7 +70,4 @@ title: "My Page"
 date: 2024-08-12
 noindex: true
 ---
-
 ```
-
-- mobile media guides hide image
