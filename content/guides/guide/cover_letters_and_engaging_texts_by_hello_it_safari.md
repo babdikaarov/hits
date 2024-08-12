@@ -1,14 +1,15 @@
 ---
-title: Cover letters and engaging texts by Hello IT Safari 🦖
-description: Cover letters and engaging texts by Hello IT Safari 🦖
-date: 2024-08-07
 hero_bg: https://images.unsplash.com/photo-1529251333259-d36cccaf22ea?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
 customIcon: 💌
+title: Cover letters and engaging texts by Hello IT Safari 🦖
+description: Cover letters and engaging texts by Hello IT Safari 🦖
 categories:
   - interview
+date: 2024-08-06
 relatePage: false
 ---
-{{< quote emoji="💡" color="" >}}
+
+{{< quote emoji="💡" color="#392e1e" >}}
 
 Cover letters help you to stand out. We offer cover letter tips as a bonus for our amazing services. They help candidates stand out during the competition. We know writing them takes quite some time, so these tips and materials will help you save time and gain quality.
 
@@ -18,15 +19,14 @@ og data
 
 🆕 Introduction to Cover letters with high-quality 3rd party materials
 
-
-## 📝 Cover letter structure
+### 📝 Cover letter structure
 
 1. Greetings and an explanation of why you are applying for the job (specify the position). Create a connection that will encourage your reader to continue reading.
 2. Main paragraph: Explain how you will contribute to the business and solve problems, and what makes you the best fit for this company.
 3. In addition to item 2, you can also describe how your past experience aligns with the position's requirements.
 4. In closing, thank your reader once more and reiterate why you are a suitable candidate for the position.
 
-## 🌟 Cover letters PRO tips
+### 🌟 Cover letters PRO tips
 
 - Explain how you contribute to the business and solve problems, and what makes you the ideal candidate.
 - Avoid copying and pasting from your resume.
@@ -35,11 +35,11 @@ og data
 - Specify the particular position and company name for each cover letter.
 - Tailor it specifically to the position you are applying for, and include keywords from the job description.
 
-## 🇺🇸 ENG ChatGPT Prompt
+### 🇺🇸 ENG ChatGPT Prompt
 
 ### Message 1:
 
-```md
+```txt
 Write me a personalized cover letter explaining why I'm a great candidate for this job. It should be 3-4 paragraphs at most.
 
 The first paragraph should be an opening with greetings and an explanation of why I apply for a job. Create a connection that will make my reader continue to read it
@@ -53,13 +53,14 @@ The job title is [Job Title], the company is [Company Name], and here is the job
 
 Message 2:
 
-```md
+```txt
 Revise and personalize this cover letter using my resume: [Paste Resume Content]
 ```
 
 ## 🇷🇺 RU ChatGPT Prompt
 
 ### Message 1:
+
 ```md
 Напишите мне сопроводительное письмо, объясняющее, почему я отличный кандидат на эту работу. Максимум 3-4 абзаца.
 
@@ -86,7 +87,7 @@ Remember this is only a template. Your job is to research a person and customize
 
 {{< /quote >}}
 
-#1
+\#1
 
 Dear Kees,
 
@@ -104,7 +105,7 @@ Anna
 
 —-----------------------------------------------------------------------------------------------
 
-#2
+\#2
 
 Dear Ms. Rusu,
 
@@ -120,7 +121,7 @@ Olga
 
 —-----------------------------------------------------------------------------------------------
 
-#3
+\#3
 
 Hi Genia,
 
@@ -132,7 +133,7 @@ Faisal
 
 —-----------------------------------------------------------------------------------------------
 
-#4
+\#4
 
 Добрый день {имя}! Меня зовут <name>, приятно познакомиться 🤝
 
@@ -144,7 +145,7 @@ Faisal
 
 —-----------------------------------------------------------------------------------------------
 
-#5
+\#5
 
 Добрый день {имя}! Меня зовут <name>, приятно познакомиться 🤝
 
@@ -156,7 +157,7 @@ Faisal
 
 —-----------------------------------------------------------------------------------------------
 
-#6
+\#6
 
 Добрый день {имя}! Меня зовут <name>, приятно познакомиться 🤝Я увидел, что вы фаундер {название компании}, и решил вам написать.
 

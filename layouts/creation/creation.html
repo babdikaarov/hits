@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <main class="container mx-auto">
+    <div class="markdown mb-9">
+      <div>{{ .Content }}</div>
+    </div>
+    <ul class="list-disc">
+      {{ range (.Paginate .Pages 10).Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}" class="size-5 top-0 right-0 relative">
+            {{ .Params.title }}
+          </a>
+        </li>
+      {{ end }}
+
+    </ul>
+    <div class="flex justify-center">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </main>
+{{ end }}

@@ -21,7 +21,11 @@
               </div>
             </div>
             <div class="flex-[1_1_180px] md:hidden lg:block">
-              <img class="size-full" src="{{ .image }}" alt="Image" />
+              <img
+                class="size-full object-cover"
+                src="{{ .image }}"
+                alt="Image"
+              />
             </div>
           </a>
         {{ end }}

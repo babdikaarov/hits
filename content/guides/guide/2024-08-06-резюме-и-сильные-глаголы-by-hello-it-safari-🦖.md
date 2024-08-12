@@ -1,13 +1,13 @@
 ---
+hero_bg: https://images.unsplash.com/photo-1423592707957-3b212afa6733?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800
+customIcon: 💼
 title: "Резюме и сильные глаголы by Hello IT Safari 🦖 "
 description: Грамотное резюме должно **подчеркивать ваши достижения**, а не
   перечислять обязанности. Все мы делаем что-то, но только звездные кандидаты
   достигают это “что-то
 categories:
   - interview
-date: 2024-08-06
-hero_bg: https://images.unsplash.com/photo-1423592707957-3b212afa6733?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800
-customIcon: 💼
+date: 2024-08-11
 relatePage: false
 ---
 

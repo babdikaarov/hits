@@ -2,6 +2,9 @@ baseURL: "https://helloitsafari.netlify.app"
 
 enableGitInfo: true
 
+params:
+  logo: /media/defaults/icons/logo.svg
+
 taxonomies:
   category: categories
   tag: tags
@@ -26,6 +29,7 @@ languages:
     languageDirection: ltr
     languageName: Русский
     weight: 1
+
   en:
     disabled: true
     languageCode: en-US
@@ -47,3 +51,9 @@ markup:
     renderer:
       hardWraps: false
       unsafe: true
+
+sitemap:
+  changeFreq: "monthly"
+  disable: false
+  filename: sitemap.xml
+  priority: 0.5

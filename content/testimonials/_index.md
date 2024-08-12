@@ -8,6 +8,9 @@ menu:
     pageRef: /testimonails
     weight: 5
 customIcon: 🚀
+sitemap:
+  changefreq: monthly
+  priority: 0.7
 ---
 
 {{% section %}}

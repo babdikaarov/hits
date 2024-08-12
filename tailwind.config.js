@@ -22,6 +22,8 @@ module.exports = {
         borderSpinActive: "borderSpin 0.7s forward",
       },
       backgroundImage: {
+        "hero-default":
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 19%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 82%, rgba(0, 0, 0, 0) 100%)",
         "onDark-icon-share": "var(--arrow-ondark-icon-url)",
         "onLight-icon-share": "var(--arrow-onlight-icon-url)",
         "grannary-effect": "var(--filter-grannary-image-url)",

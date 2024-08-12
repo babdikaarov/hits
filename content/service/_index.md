@@ -4,7 +4,9 @@ title: "Услуги Hello IT Safari | HITS  🦖"
 hero_bg: /media/images/hits.png
 og_image: /media/images/hits.png
 customIcon: 👨‍💻
-
+sitemap:
+  changefreq: monthly
+  priority: 0.9
 menu:
   mainmenu:
     name: Услуги

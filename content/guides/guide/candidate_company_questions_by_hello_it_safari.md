@@ -1,19 +1,20 @@
 ---
+customIcon: 👩🏻‍💻
 title: Candidate ⇒ company questions by Hello IT Safari 🦖
 description: Candidate ⇒ company questions by Hello IT Safari 🦖
-date: 2024-08-07
-customIcon: 👩🏻‍💻
 categories:
   - interview
+date: 2024-08-08
 relatePage: false
 ---
-{{< quote emoji="💡" color="" >}}
+
+{{< quote emoji="💡" color="#392e1e" >}}
 
 To make a good impression, you need to ask questions in an interview! Moreover, you will get valuable information about the company and the position which can help you to make the right decision.
 
 {{< /quote >}}
 
-{{< quote emoji="❣️" color="" >}}
+{{< quote emoji="❣️" color="#302228" >}}
 
 Call your interviewer by his/her name. People LOVE when we pronounce their names. It makes them comfortable and special
 
@@ -27,7 +28,7 @@ Call your interviewer by his/her name. People LOVE when we pronounce their names
 4. What do you like in about your job/company?
 5. What do you find interesting about my experience/resume?
 
-## 📞 **Questions for HR | Recruiter:**
+### 📞 **Questions for HR | Recruiter:**
 
 1. Name 2 things you like about working at this company.
 2. Name 2 things you dislike or would like to improve in the company.
@@ -35,7 +36,7 @@ Call your interviewer by his/her name. People LOVE when we pronounce their names
 4. What did you like/dislike about my resume?
 5. How would you describe the suitable candidate for this position?
 
-## 🧑‍💻 **Questions about the vacancy:**
+### 🧑‍💻 **Questions about the vacancy:**
 
 1. Who are the main stakeholders for this position?
 2. What difficulties are the stakeholders currently facing?
@@ -53,7 +54,7 @@ Call your interviewer by his/her name. People LOVE when we pronounce their names
 14. Additional non-disclosure agreement?
 15. What is your branching strategy?
 
-## 👔 🏢 **Questions about the company:**
+### 👔 🏢 **Questions about the company:**
 
 1. Do you practice code review?
 2. How does your company differ from competitors: Epam, Anderson, Forte, etc.?

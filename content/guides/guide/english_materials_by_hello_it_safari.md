@@ -1,11 +1,11 @@
 ---
+hero_bg: https://images.unsplash.com/photo-1521714161819-15534968fc5f?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
+customIcon: 🇺🇸
 title: English materials by Hello IT Safari 🦖
 description: English materials by Hello IT Safari 🦖
 categories:
-  - interview
+  - learning
 date: 2024-08-07
-hero_bg: https://images.unsplash.com/photo-1521714161819-15534968fc5f?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-customIcon: 🇺🇸
 relatePage: false
 ---
 

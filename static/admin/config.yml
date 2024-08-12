@@ -12,7 +12,7 @@ slug:
 
 collections:
   - name: "home"
-    label: "Home"
+    label: "Главная"
     folder: "content"
     create: false
     delete: false
@@ -51,7 +51,7 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "service"
-    label: "Service"
+    label: "Услуги"
     folder: "content/service"
     delete: false
     create: false
@@ -90,7 +90,7 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "guide"
-    label: "guide"
+    label: "page Гайды"
     folder: "content/guides"
     delete: false
     create: false
@@ -127,8 +127,43 @@ collections:
           widget: "string",
           required: false,
         }
+
+  - name: "guides"
+    label: "list Гайды"
+    folder: "content/guides/guide"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "hero bg ", name: "hero_bg", widget: "image", required: false }
+      - {
+          label: "custom Icon",
+          name: "customIcon",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "summary", name: "summary", widget: "string", required: false }
+      - { label: "categories", name: "categories", widget: "list" }
+      - { label: "tag", name: "tags", widget: "list" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "HITS",
+          required: false,
+        }
   - name: "testimonial"
-    label: "testimonial"
+    label: "page Отзывов"
     folder: "content/testimonials"
     delete: false
     create: false
@@ -143,6 +178,7 @@ collections:
         name: "menu"
         widget: "object"
         collapsed: true
+        required: true
         fields:
           - label: "Main Menu"
             name: "mainmenu"
@@ -168,12 +204,12 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "testimonials"
-    label: "testimonials"
+    label: "list Отзывы"
     folder: "content/testimonials/feedback"
     create: true
     slug: "{{slug}}"
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "hero bg ", name: "hero_bg", widget: "image", required: false }
       - {
@@ -182,8 +218,14 @@ collections:
           widget: "string",
           required: false,
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "summary", name: "summary", widget: "string", required: false }
       - {
           label: "Publish Date",
           name: "date",
@@ -191,52 +233,34 @@ collections:
           format: "YYYY-MM-DD",
         }
       - { label: "Recomender", name: "recomendedBy", widget: "string" }
-      - { label: "linked In", name: "linkedIn", widget: "string" }
+      - label: "linkedIn"
+        name: "linkedIn"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - label: "username"
+            name: "username"
+            widget: "string"
+            required: false
+          - label: "link"
+            name: "link"
+            widget: "string"
+            required: false
+
       - { label: "image path", name: "image", widget: "image" }
       - {
           label: "Link to single Page",
           name: "relatePage",
           widget: "boolean",
           default: false,
-        }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - {
-          label: "Author",
-          name: "author",
-          widget: "author",
-          default: "HITS",
           required: false,
-        }
-  - name: "guides"
-    label: "Guides"
-    folder: "content/guides/guide"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "hero bg ", name: "hero_bg", widget: "image", required: false }
-      - {
-          label: "custom Icon",
-          name: "customIcon",
-          widget: "string",
-          required: false,
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "categories", name: "categories", widget: "list" }
-      - { label: "tag", name: "tags", widget: "list" }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DD",
         }
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - {
           label: "Author",
           name: "author",
-          widget: "string",
+          widget: "author",
           default: "HITS",
           required: false,
         }

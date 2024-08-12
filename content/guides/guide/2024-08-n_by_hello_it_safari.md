@@ -1,9 +1,9 @@
 ---
-title: 🇰🇬 Аналитика вакансий Кыргызстана by Hello IT Safari 🦖
-description: 🇰🇬 Аналитика вакансий Кыргызстана by Hello IT Safari 🦖
-date: 2024-08-07
 hero_bg: /media/uploads/white_minimalist_corporate_personal_profile_linkedin_banner.png
 customIcon: 💸
+title: 🇰🇬 Аналитика вакансий Кыргызстана by Hello IT Safari 🦖
+description: 🇰🇬 Аналитика вакансий Кыргызстана by Hello IT Safari 🦖
+date: 2024-08-09
 relatePage: false
 categories:
   - interview

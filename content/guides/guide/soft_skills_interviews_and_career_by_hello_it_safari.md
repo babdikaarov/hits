@@ -1,11 +1,10 @@
 ---
+customIcon: 🤾🏻‍♂️
 title: Soft skills, interviews, and career by Hello IT Safari 🦖
 description: Soft skills, interviews, and career by Hello IT Safari 🦖
-date: 2024-08-07
-customIcon: 🤾🏻‍♂️
 categories:
   - interview
-  - learning
+date: 2024-08-04
 relatePage: false
 ---
 

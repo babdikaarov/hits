@@ -1,10 +1,16 @@
 ---
-title: cms
-description: descritpion
-date: 2024-08-06
 hero_bg: /media/uploads/backgr.jpg
-recomendedBy: beksutlan
-linkedIn: babdikaarov
-image: /media/uploads/1.png
+title: Stanislav
+description: descritpion
+date: 2024-07-18
+recomendedBy: Stanislav
+linkedIn:
+  username: Linked In
+  link: https://www.linkedin.com
+image: /media/uploads/2.png
 relatePage: true
 ---
+
+### this could be an article
+
+![test](/media/uploads/backgr.jpg)

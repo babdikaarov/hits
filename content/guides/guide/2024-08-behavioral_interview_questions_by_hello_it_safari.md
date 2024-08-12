@@ -1,11 +1,11 @@
 ---
+hero_bg: https://hello-it-safari.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fc71467b2-3b98-4a78-82aa-26140b2d36f6%2F7b4e8ff7-759a-42b1-bbca-85e003c0ed0d%2F2021-10-27_understanding-great-behavioral-interviewing-questions_(2).jpg?table=block&id=451943c5-cedb-4304-bd68-bbe66bd50126&spaceId=c71467b2-3b98-4a78-82aa-26140b2d36f6&width=2000&userId=&cache=v2
+customIcon: 🏆
 title: Behavioral interview questions by Hello IT Safari 🦖
 description: Practice, practice, and practice! Practice makes perfect.
 categories:
   - interview
-date: 2024-08-07
-hero_bg: https://hello-it-safari.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fc71467b2-3b98-4a78-82aa-26140b2d36f6%2F7b4e8ff7-759a-42b1-bbca-85e003c0ed0d%2F2021-10-27_understanding-great-behavioral-interviewing-questions_(2).jpg?table=block&id=451943c5-cedb-4304-bd68-bbe66bd50126&spaceId=c71467b2-3b98-4a78-82aa-26140b2d36f6&width=2000&userId=&cache=v2
-customIcon: 🏆
+date: 2024-08-10
 relatePage: false
 ---
 
