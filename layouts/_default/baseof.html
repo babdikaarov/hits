@@ -33,8 +33,11 @@
         });
     }
 
-    if (location.href.indexOf("#invite_token" || "#email_change_token" || "#confirmation_token" || "#recovery_token") != -1) {
-      var urlSplit = document.URL.split("#");
+    const tokens = ["#invite_token", "#email_change_token", "#confirmation_token", "#recovery_token"];
+    const currentHash = window.location.hash;
+    const shouldRedirect = tokens.some(token => currentHash.startsWith(token));
+    if (shouldRedirect) {
+      const urlSplit = document.URL.split("#");
       window.location = `/admin/#${urlSplit[1]}`;
     }
   </script>
