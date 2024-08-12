@@ -72,3 +72,5 @@ noindex: true
 ---
 
 ```
+
+- mobile media guides hide image
