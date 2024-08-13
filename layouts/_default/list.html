@@ -11,9 +11,13 @@
             {{ if gt (len $value) 0 }}
               {{ $translatedName := i18n ($key) }}
               {{ if $translatedName }}
-                <p class="mr-2 text-gray-300">{{ $translatedName }}:</p>
+                <p class="mr-2 text-slate-600 dark:text-gray-300">
+                  {{ $translatedName }}:
+                </p>
               {{ else }}
-                <p class="mr-2 text-gray-300">{{ $key }}:</p>
+                <p class="mr-2 text-slate-600 dark:text-gray-300">
+                  {{ $key }}:
+                </p>
               {{ end }}
               <div class="flex gap-4">
                 {{ range $termKey, $termValue := $value }}
@@ -28,7 +32,7 @@
                     </button>
                   {{ else }}
                     <a
-                      class="text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+                      class="text-slate-600 dark:text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
                       href=" {{ $termValue.Page.Permalink }}"
                       >{{ $termKey }}</a
                     >
@@ -78,13 +82,13 @@
               <div>
                 {{ range .Params.categories }}
                   <span
-                    class="text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+                    class="text-slate-600 dark:text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
                     >{{ . }}</span
                   >
                 {{ end }}
                 {{ range .Params.tags }}
                   <span
-                    class="text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+                    class="text-slate-600 dark:text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
                     >{{ . }}</span
                   >
                 {{ end }}

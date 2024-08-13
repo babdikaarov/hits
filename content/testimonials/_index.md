@@ -32,7 +32,7 @@ sitemap:
 </div>
 
 **Напишите нам!**
-{class="text-[#D9730D] mb-2"}
+{class="text-[#A81F00] dark:text-primary mb-2"}
 
 {{< contact
 tel="a_zh007"
