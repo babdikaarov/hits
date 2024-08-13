@@ -19,14 +19,14 @@ og data
 
 🆕 Introduction to Cover letters with high-quality 3rd party materials
 
-### 📝 Cover letter structure
+## 📝 Cover letter structure
 
 1. Greetings and an explanation of why you are applying for the job (specify the position). Create a connection that will encourage your reader to continue reading.
 2. Main paragraph: Explain how you will contribute to the business and solve problems, and what makes you the best fit for this company.
 3. In addition to item 2, you can also describe how your past experience aligns with the position's requirements.
 4. In closing, thank your reader once more and reiterate why you are a suitable candidate for the position.
 
-### 🌟 Cover letters PRO tips
+## 🌟 Cover letters PRO tips
 
 - Explain how you contribute to the business and solve problems, and what makes you the ideal candidate.
 - Avoid copying and pasting from your resume.
@@ -35,9 +35,9 @@ og data
 - Specify the particular position and company name for each cover letter.
 - Tailor it specifically to the position you are applying for, and include keywords from the job description.
 
-### 🇺🇸 ENG ChatGPT Prompt
+## 🇺🇸 ENG ChatGPT Prompt
 
-### Message 1:
+## Message 1:
 
 ```txt
 Write me a personalized cover letter explaining why I'm a great candidate for this job. It should be 3-4 paragraphs at most.
@@ -59,7 +59,7 @@ Revise and personalize this cover letter using my resume: [Paste Resume Content]
 
 ## 🇷🇺 RU ChatGPT Prompt
 
-### Message 1:
+## Message 1:
 
 ```md
 Напишите мне сопроводительное письмо, объясняющее, почему я отличный кандидат на эту работу. Максимум 3-4 абзаца.

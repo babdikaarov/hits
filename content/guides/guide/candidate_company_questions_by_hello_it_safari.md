@@ -20,7 +20,7 @@ Call your interviewer by his/her name. People LOVE when we pronounce their names
 
 {{< /quote >}}
 
-### Typical list of questions without categories
+## Typical list of questions without categories
 
 1. What does a good candidate look like?
 2. What do you expect from me in this role after 6-12 months?
@@ -28,7 +28,7 @@ Call your interviewer by his/her name. People LOVE when we pronounce their names
 4. What do you like in about your job/company?
 5. What do you find interesting about my experience/resume?
 
-### 📞 **Questions for HR | Recruiter:**
+## 📞 **Questions for HR | Recruiter:**
 
 1. Name 2 things you like about working at this company.
 2. Name 2 things you dislike or would like to improve in the company.
@@ -36,7 +36,7 @@ Call your interviewer by his/her name. People LOVE when we pronounce their names
 4. What did you like/dislike about my resume?
 5. How would you describe the suitable candidate for this position?
 
-### 🧑‍💻 **Questions about the vacancy:**
+## 🧑‍💻 **Questions about the vacancy:**
 
 1. Who are the main stakeholders for this position?
 2. What difficulties are the stakeholders currently facing?
@@ -54,7 +54,7 @@ Call your interviewer by his/her name. People LOVE when we pronounce their names
 14. Additional non-disclosure agreement?
 15. What is your branching strategy?
 
-### 👔 🏢 **Questions about the company:**
+## 👔 🏢 **Questions about the company:**
 
 1. Do you practice code review?
 2. How does your company differ from competitors: Epam, Anderson, Forte, etc.?

@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ with or .Title site.Title site.Params.title | plainify }}
-  <meta property="og:title" content="{{ . }}" />
+  <meta property="og:title" content="{{ . }} | HITS | HELLO IT SAFARI" />
 {{ end }}
 
 {{ with or .Description .Summary site.Params.description | plainify | htmlUnescape | chomp }}

@@ -5,17 +5,15 @@
   name="description"
   content="{{ if .Params.summary }}
     {{ .Params.summary }}
-  {{ else if .Site.Params.Description }}
-    {{ .Site.Params.Description }}
+  {{ else if .Description }}
+    {{ .Description }}
   {{ else }}
     Hardcoded description; the author should update front matters summary or
     Description:)
   {{ end }}"
 />
 
-<title>
-  {{ .Title }}
-</title>
+<title>{{ .Title }} | HITS | HELLO IT SAFARI</title>
 
 {{ template "_internal/google_analytics.html" . }}
 <meta name="generator" content="hugo" />
@@ -24,7 +22,6 @@
   content="BMdvAc2M4Ybd71F5GD7wCx6Uyl2_tgBBR7-2LSL-EJE"
 />
 <!-- google verification here is duplicated hence the html option is avaiable at static folder -->
-<meta name="yandex-verification" content="1234567890" />
 <meta name="publisher" content="Netlify" />
 <meta name="author" content="Hello IT SAFARI" />
 <link rel="author" href="https://www.linkedin.com/company/hello-it-safari" />

@@ -2,7 +2,7 @@
 
 ## ECAP cms usage
 
-### local usage
+## local usage
 
 - config
 
@@ -20,7 +20,7 @@ npx decap-server
 # add /admin path to the local hugo server
 ```
 
-### netlify usage
+## netlify usage
 
 - config
 
@@ -41,7 +41,7 @@ TODO:
 - create content for content creation guide and shortcode usage
 - documentaion usage of og_data API
 
-### pending articles
+## pending articles
 
 - Behavioral interview questions by Hello IT Safari => og data
 - Аналитика вакансий Кыргызстана by Hello IT Safari 🦖 => table

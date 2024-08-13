@@ -41,8 +41,8 @@
     {{ with resources.Get "json/contacts.json" }}
       {{ with . | transform.Unmarshal }}
         {{ range . }}
-          <div
-            class="p-4 w-full text-white relative bg-slate-600/60 dark:bg-[#2b2431] rounded flex gap-3"
+          <li
+            class="p-4 w-full text-white relative bg-slate-600 dark:bg-slate-600/60 dark:bg-[#2b2431] rounded flex gap-3"
           >
             <a
               href="{{ .original_url }}"
@@ -77,7 +77,7 @@
               </div>
             </div>
             <!--  -->
-          </div>
+          </li>
         {{ end }}
       {{ end }}
     {{ end }}

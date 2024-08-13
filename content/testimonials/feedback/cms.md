@@ -11,6 +11,6 @@ image: /media/uploads/2.png
 relatePage: true
 ---
 
-### this could be an article
+## this could be an article
 
 ![test](/media/uploads/backgr.jpg)

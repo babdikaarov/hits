@@ -21,7 +21,12 @@ collections:
     sortable_fields: []
     fields:
       - { label: "title", name: "title", widget: "string", required: true }
-      - { label: "summary", name: "summary", widget: "string", required: true }
+      - {
+          label: "description",
+          name: "description",
+          widget: "string",
+          required: true,
+        }
       - { label: "og_image", name: "og_image", widget: "image", required: true }
       - label: "Menu"
         name: "menu"
@@ -60,7 +65,12 @@ collections:
       preview: true
     fields:
       - { label: "title", name: "title", widget: "string", required: true }
-      - { label: "summary", name: "summary", widget: "string", required: true }
+      - {
+          label: "description",
+          name: "description",
+          widget: "string",
+          required: true,
+        }
       - { label: "og_image", name: "og_image", widget: "image", required: true }
       - label: "Menu"
         name: "menu"
@@ -99,7 +109,12 @@ collections:
       preview: true
     fields:
       - { label: "title", name: "title", widget: "string", required: true }
-      - { label: "summary", name: "summary", widget: "string", required: true }
+      - {
+          label: "description",
+          name: "description",
+          widget: "string",
+          required: true,
+        }
       - { label: "og_image", name: "og_image", widget: "image", required: true }
       - label: "Menu"
         name: "menu"
@@ -145,7 +160,12 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "summary", name: "summary", widget: "string", required: false }
+      - {
+          label: "description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
       - { label: "categories", name: "categories", widget: "list" }
       - { label: "tag", name: "tags", widget: "list" }
       - {
@@ -172,7 +192,12 @@ collections:
       preview: true
     fields:
       - { label: "title", name: "title", widget: "string", required: true }
-      - { label: "summary", name: "summary", widget: "string", required: true }
+      - {
+          label: "description",
+          name: "description",
+          widget: "string",
+          required: true,
+        }
       - { label: "og_image", name: "og_image", widget: "image", required: true }
       - label: "Menu"
         name: "menu"
@@ -225,7 +250,12 @@ collections:
           widget: "string",
           required: false,
         }
-      - { label: "summary", name: "summary", widget: "string", required: false }
+      - {
+          label: "description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
       - {
           label: "Publish Date",
           name: "date",

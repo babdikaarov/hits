@@ -11,9 +11,9 @@
             {{ if gt (len $value) 0 }}
               {{ $translatedName := i18n ($key) }}
               {{ if $translatedName }}
-                <h4 class="mr-2 text-gray-500">{{ $translatedName }}:</h4>
+                <p class="mr-2 text-gray-300">{{ $translatedName }}:</p>
               {{ else }}
-                <h4 class="mr-2 text-gray-500">{{ $key }}:</h4>
+                <p class="mr-2 text-gray-300">{{ $key }}:</p>
               {{ end }}
               <div class="flex gap-4">
                 {{ range $termKey, $termValue := $value }}
@@ -28,7 +28,7 @@
                     </button>
                   {{ else }}
                     <a
-                      class="text-gray-500 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+                      class="text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
                       href=" {{ $termValue.Page.Permalink }}"
                       >{{ $termKey }}</a
                     >
@@ -63,7 +63,7 @@
             {{ end }}
           </div>
           <div class="w-full p-3 flex flex-col justify-between">
-            <h3 class="text-base ">{{ .Params.title }}</h3>
+            <h2 class="text-base ">{{ .Params.title }}</h2>
             <p class="text-xsm line-clamp-3">
               {{ .Params.description }}
             </p>
@@ -78,13 +78,13 @@
               <div>
                 {{ range .Params.categories }}
                   <span
-                    class="text-gray-500 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+                    class="text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
                     >{{ . }}</span
                   >
                 {{ end }}
                 {{ range .Params.tags }}
                   <span
-                    class="text-gray-500 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
+                    class="text-gray-300 border-primary/40 rounded border-2 px-1 hover:text-primary hover:border-primary"
                     >{{ . }}</span
                   >
                 {{ end }}

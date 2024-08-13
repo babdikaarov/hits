@@ -4,6 +4,7 @@ importScripts(
 
 const { registerRoute } = workbox.routing;
 const { StaleWhileRevalidate, NetworkOnly } = workbox.strategies;
+const { ExpirationPlugin } = workbox.expiration;
 
 registerRoute(
   ({ url }) =>
@@ -19,5 +20,12 @@ registerRoute(
     request.destination === "image" ||
     request.destination === "document",
 
-  new StaleWhileRevalidate(),
+  new StaleWhileRevalidate({
+    cacheName: "image-cache",
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: 1 * 60 * 60,
+      }),
+    ],
+  }),
 );
