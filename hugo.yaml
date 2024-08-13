@@ -54,6 +54,6 @@ markup:
 
 sitemap:
   changeFreq: "monthly"
-  disable: false
+  disable: true
   filename: sitemap.xml
   priority: 0.5

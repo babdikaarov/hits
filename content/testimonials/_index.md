@@ -11,6 +11,7 @@ customIcon: 🚀
 sitemap:
   changefreq: monthly
   priority: 0.7
+  disable: false
 ---
 
 {{% section %}}

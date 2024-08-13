@@ -7,6 +7,7 @@ customIcon: 👨‍💻
 sitemap:
   changefreq: monthly
   priority: 0.9
+  disable: false
 menu:
   mainmenu:
     name: Услуги

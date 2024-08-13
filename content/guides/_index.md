@@ -1,17 +1,16 @@
 ---
 title: Hello IT Safari  гайды
 description: "Hello IT Safari — Ваш партнер в поиске идеальной работы в IT. Мы, HITS (Hello IT Safari), специализируемся на рекрутинге и карьерной поддержке IT-специалистов в Бишкеке, Кыргызстане и за его пределами. Наша миссия — помочь вам найти работу, соответствующую вашим ожиданиям и навыкам. Мы предоставляем комплексные услуги: от составления резюме и улучшения профиля на LinkedIn до анализа вакансий и подготовки к интервью. Мы также проводим технические интервью и предоставляем детализированную обратную связь для выявления слабых мест и их устранения. Узнайте больше о нас и читайте отзывы на тему аутсорсинга и рекрутинга на сайте Hello IT Safari."
-sitemap:
-  changefreq: weekly
-  disable: false
-  priority: 0.8
+
 hero_bg: https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1224
-sitemap:
-  changefreq: monthly
-  priority: 0.8
+
 menu:
   mainmenu:
     name: Гайды
     pageRef: /guides
     weight: 4
+sitemap:
+  changefreq: monthly
+  priority: 0.8
+  disable: false
 ---

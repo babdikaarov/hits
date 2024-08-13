@@ -4,6 +4,7 @@ title: "Добро пожаловать в Hello IT Safari 🦖"
 sitemap:
   changefreq: monthly
   priority: 1
+  disable: false
 
 hero_bg: https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1224
 customIcon: false
