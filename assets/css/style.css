@@ -2138,6 +2138,10 @@ main {
   color: rgb(153 27 27 / var(--tw-text-opacity)) !important;
 }
 
+.peer:hover ~ .peer-hover\:fixed {
+  position: fixed !important;
+}
+
 .peer:hover ~ .peer-hover\:h-\[200px\] {
   height: 200px !important;
 }
@@ -2193,6 +2197,10 @@ main {
 
   .md\:opacity-100 {
     opacity: 1 !important;
+  }
+
+  .peer:hover ~ .peer-hover\:md\:flex {
+    display: flex !important;
   }
 }
 
