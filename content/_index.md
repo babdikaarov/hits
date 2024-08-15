@@ -8,7 +8,7 @@ sitemap:
 
 hero_bg: https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1224
 customIcon: false
-og_image: /media/images/hits.png
+og_image: /media/images/og-image.png
 menu:
   mainmenu:
     name: Главная

@@ -8,6 +8,7 @@ sitemap:
   changefreq: monthly
   priority: 0.9
   disable: false
+og_image: /media/images/og-image.png
 menu:
   mainmenu:
     name: Услуги

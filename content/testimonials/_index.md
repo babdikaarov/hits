@@ -8,6 +8,7 @@ menu:
     pageRef: /testimonails
     weight: 5
 customIcon: 🚀
+og_image: /media/images/og-image.png
 sitemap:
   changefreq: monthly
   priority: 0.7
